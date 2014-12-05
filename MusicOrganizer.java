@@ -16,7 +16,7 @@ public class MusicOrganizer
      */
     public MusicOrganizer()
     {
-        files = new ArrayList<String>();
+            files = new ArrayList<>();
     }
     
     /**
@@ -59,4 +59,19 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    
+    public void checkIndex(int index)
+    {
+        int max = this.files.size();
+        if (max == 0)
+        {
+            System.out.println("no elements in Array");
+        }
+        else if( (index >= max) || index < 0 )
+        {
+            System.out.println("Error rang 0-" + (max-1));
+        }
+        
+    }
+    
 }
